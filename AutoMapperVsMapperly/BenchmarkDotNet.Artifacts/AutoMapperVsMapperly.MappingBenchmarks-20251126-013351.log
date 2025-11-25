@@ -1,0 +1,431 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1/" /p:OutDir="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0/" /p:OutputPath="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0/" /p:PublishDir="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\publish/" in D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1
+// command took 1.15 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1/" /p:OutDir="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0/" /p:OutputPath="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0/" /p:PublishDir="D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\publish/" --output "D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0/" in D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1
+// command took 6.07 sec and exited with 0
+// ***** Done, took 00:00:07 (7.3 sec)   *****
+// Found 3 benchmarks:
+//   MappingBenchmarks.ManualMapping: DefaultJob [Count=100000]
+//   MappingBenchmarks.AutoMapperMapping: DefaultJob [Count=100000]
+//   MappingBenchmarks.MapperlyMapping: DefaultJob [Count=100000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: MappingBenchmarks.ManualMapping: DefaultJob [Count=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AutoMapperVsMapperly-DefaultJob-1.dll --anonymousPipes 1388 1080 --benchmarkName "AutoMapperVsMapperly.MappingBenchmarks.ManualMapping(Count: 100000)" --job Default --benchmarkId 0 in D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.6
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 171200.00 ns, 171.2000 us/op
+WorkloadJitting  1: 1 op, 24618700.00 ns, 24.6187 ms/op
+
+OverheadJitting  2: 16 op, 478000.00 ns, 29.8750 us/op
+WorkloadJitting  2: 16 op, 620704500.00 ns, 38.7940 ms/op
+
+WorkloadPilot    1: 16 op, 641845400.00 ns, 40.1153 ms/op
+
+OverheadWarmup   1: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadWarmup   2: 16 op, 3500.00 ns, 218.7500 ns/op
+OverheadWarmup   3: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadWarmup   4: 16 op, 1500.00 ns, 93.7500 ns/op
+OverheadWarmup   5: 16 op, 1200.00 ns, 75.0000 ns/op
+
+OverheadActual   1: 16 op, 1300.00 ns, 81.2500 ns/op
+OverheadActual   2: 16 op, 1200.00 ns, 75.0000 ns/op
+OverheadActual   3: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadActual   4: 16 op, 1300.00 ns, 81.2500 ns/op
+OverheadActual   5: 16 op, 1200.00 ns, 75.0000 ns/op
+OverheadActual   6: 16 op, 1800.00 ns, 112.5000 ns/op
+OverheadActual   7: 16 op, 1600.00 ns, 100.0000 ns/op
+OverheadActual   8: 16 op, 1300.00 ns, 81.2500 ns/op
+OverheadActual   9: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadActual  10: 16 op, 900.00 ns, 56.2500 ns/op
+OverheadActual  11: 16 op, 1500.00 ns, 93.7500 ns/op
+OverheadActual  12: 16 op, 2200.00 ns, 137.5000 ns/op
+OverheadActual  13: 16 op, 1700.00 ns, 106.2500 ns/op
+OverheadActual  14: 16 op, 15600.00 ns, 975.0000 ns/op
+OverheadActual  15: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadActual  16: 16 op, 1200.00 ns, 75.0000 ns/op
+OverheadActual  17: 16 op, 1500.00 ns, 93.7500 ns/op
+OverheadActual  18: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadActual  19: 16 op, 1600.00 ns, 100.0000 ns/op
+OverheadActual  20: 16 op, 1300.00 ns, 81.2500 ns/op
+
+WorkloadWarmup   1: 16 op, 613473800.00 ns, 38.3421 ms/op
+WorkloadWarmup   2: 16 op, 608056100.00 ns, 38.0035 ms/op
+WorkloadWarmup   3: 16 op, 606177400.00 ns, 37.8861 ms/op
+WorkloadWarmup   4: 16 op, 600594500.00 ns, 37.5372 ms/op
+WorkloadWarmup   5: 16 op, 605894000.00 ns, 37.8684 ms/op
+WorkloadWarmup   6: 16 op, 605314700.00 ns, 37.8322 ms/op
+WorkloadWarmup   7: 16 op, 603266000.00 ns, 37.7041 ms/op
+WorkloadWarmup   8: 16 op, 614733500.00 ns, 38.4208 ms/op
+WorkloadWarmup   9: 16 op, 593957500.00 ns, 37.1223 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 16 op, 629061700.00 ns, 39.3164 ms/op
+WorkloadActual   2: 16 op, 592551900.00 ns, 37.0345 ms/op
+WorkloadActual   3: 16 op, 611174700.00 ns, 38.1984 ms/op
+WorkloadActual   4: 16 op, 627029000.00 ns, 39.1893 ms/op
+WorkloadActual   5: 16 op, 613230500.00 ns, 38.3269 ms/op
+WorkloadActual   6: 16 op, 615156700.00 ns, 38.4473 ms/op
+WorkloadActual   7: 16 op, 641157200.00 ns, 40.0723 ms/op
+WorkloadActual   8: 16 op, 599965100.00 ns, 37.4978 ms/op
+WorkloadActual   9: 16 op, 603291600.00 ns, 37.7057 ms/op
+WorkloadActual  10: 16 op, 618355300.00 ns, 38.6472 ms/op
+WorkloadActual  11: 16 op, 635319600.00 ns, 39.7075 ms/op
+WorkloadActual  12: 16 op, 645873500.00 ns, 40.3671 ms/op
+WorkloadActual  13: 16 op, 649753800.00 ns, 40.6096 ms/op
+WorkloadActual  14: 16 op, 612289400.00 ns, 38.2681 ms/op
+WorkloadActual  15: 16 op, 593512800.00 ns, 37.0946 ms/op
+WorkloadActual  16: 16 op, 631080000.00 ns, 39.4425 ms/op
+WorkloadActual  17: 16 op, 598882200.00 ns, 37.4301 ms/op
+WorkloadActual  18: 16 op, 631512400.00 ns, 39.4695 ms/op
+WorkloadActual  19: 16 op, 596849100.00 ns, 37.3031 ms/op
+WorkloadActual  20: 16 op, 611680400.00 ns, 38.2300 ms/op
+WorkloadActual  21: 16 op, 601251600.00 ns, 37.5782 ms/op
+WorkloadActual  22: 16 op, 600196000.00 ns, 37.5123 ms/op
+WorkloadActual  23: 16 op, 602481800.00 ns, 37.6551 ms/op
+WorkloadActual  24: 16 op, 607194900.00 ns, 37.9497 ms/op
+WorkloadActual  25: 16 op, 616843000.00 ns, 38.5527 ms/op
+WorkloadActual  26: 16 op, 613326000.00 ns, 38.3329 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 16 op, 629060400.00 ns, 39.3163 ms/op
+WorkloadResult   2: 16 op, 592550600.00 ns, 37.0344 ms/op
+WorkloadResult   3: 16 op, 611173400.00 ns, 38.1983 ms/op
+WorkloadResult   4: 16 op, 627027700.00 ns, 39.1892 ms/op
+WorkloadResult   5: 16 op, 613229200.00 ns, 38.3268 ms/op
+WorkloadResult   6: 16 op, 615155400.00 ns, 38.4472 ms/op
+WorkloadResult   7: 16 op, 641155900.00 ns, 40.0722 ms/op
+WorkloadResult   8: 16 op, 599963800.00 ns, 37.4977 ms/op
+WorkloadResult   9: 16 op, 603290300.00 ns, 37.7056 ms/op
+WorkloadResult  10: 16 op, 618354000.00 ns, 38.6471 ms/op
+WorkloadResult  11: 16 op, 635318300.00 ns, 39.7074 ms/op
+WorkloadResult  12: 16 op, 645872200.00 ns, 40.3670 ms/op
+WorkloadResult  13: 16 op, 649752500.00 ns, 40.6095 ms/op
+WorkloadResult  14: 16 op, 612288100.00 ns, 38.2680 ms/op
+WorkloadResult  15: 16 op, 593511500.00 ns, 37.0945 ms/op
+WorkloadResult  16: 16 op, 631078700.00 ns, 39.4424 ms/op
+WorkloadResult  17: 16 op, 598880900.00 ns, 37.4301 ms/op
+WorkloadResult  18: 16 op, 631511100.00 ns, 39.4694 ms/op
+WorkloadResult  19: 16 op, 596847800.00 ns, 37.3030 ms/op
+WorkloadResult  20: 16 op, 611679100.00 ns, 38.2299 ms/op
+WorkloadResult  21: 16 op, 601250300.00 ns, 37.5781 ms/op
+WorkloadResult  22: 16 op, 600194700.00 ns, 37.5122 ms/op
+WorkloadResult  23: 16 op, 602480500.00 ns, 37.6550 ms/op
+WorkloadResult  24: 16 op, 607193600.00 ns, 37.9496 ms/op
+WorkloadResult  25: 16 op, 616841700.00 ns, 38.5526 ms/op
+WorkloadResult  26: 16 op, 613324700.00 ns, 38.3328 ms/op
+// GC:  65 40 13 344317568 16
+// Threading:  0 0 16
+
+// AfterAll
+// Benchmark Process 8228 has exited with code 0.
+
+Mean = 38.459 ms, StdErr = 0.201 ms (0.52%), N = 26, StdDev = 1.025 ms
+Min = 37.034 ms, Q1 = 37.597 ms, Median = 38.297 ms, Q3 = 39.285 ms, Max = 40.610 ms
+IQR = 1.687 ms, LowerFence = 35.067 ms, UpperFence = 41.815 ms
+ConfidenceInterval = [37.710 ms; 39.208 ms] (CI 99.9%), Margin = 0.749 ms (1.95% of Mean)
+Skewness = 0.52, Kurtosis = 2.1, MValue = 2.5
+
+// ** Remained 2 (66,7 %) benchmark(s) to run. Estimated finish 2025-11-26 1:35 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: MappingBenchmarks.AutoMapperMapping: DefaultJob [Count=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AutoMapperVsMapperly-DefaultJob-1.dll --anonymousPipes 1368 1468 --benchmarkName "AutoMapperVsMapperly.MappingBenchmarks.AutoMapperMapping(Count: 100000)" --job Default --benchmarkId 1 in D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.6
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 182300.00 ns, 182.3000 us/op
+WorkloadJitting  1: 1 op, 61550200.00 ns, 61.5502 ms/op
+
+WorkloadPilot    1: 2 op, 109150900.00 ns, 54.5755 ms/op
+WorkloadPilot    2: 3 op, 197568100.00 ns, 65.8560 ms/op
+WorkloadPilot    3: 4 op, 246365600.00 ns, 61.5914 ms/op
+WorkloadPilot    4: 5 op, 234341400.00 ns, 46.8683 ms/op
+WorkloadPilot    5: 6 op, 270215000.00 ns, 45.0358 ms/op
+WorkloadPilot    6: 7 op, 326021500.00 ns, 46.5745 ms/op
+WorkloadPilot    7: 8 op, 381930800.00 ns, 47.7414 ms/op
+WorkloadPilot    8: 9 op, 445414300.00 ns, 49.4905 ms/op
+WorkloadPilot    9: 10 op, 492093400.00 ns, 49.2093 ms/op
+WorkloadPilot   10: 11 op, 515695300.00 ns, 46.8814 ms/op
+
+WorkloadWarmup   1: 11 op, 510706900.00 ns, 46.4279 ms/op
+WorkloadWarmup   2: 11 op, 520093400.00 ns, 47.2812 ms/op
+WorkloadWarmup   3: 11 op, 515807500.00 ns, 46.8916 ms/op
+WorkloadWarmup   4: 11 op, 515787700.00 ns, 46.8898 ms/op
+WorkloadWarmup   5: 11 op, 532976500.00 ns, 48.4524 ms/op
+WorkloadWarmup   6: 11 op, 520913900.00 ns, 47.3558 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 11 op, 535706300.00 ns, 48.7006 ms/op
+WorkloadActual   2: 11 op, 521881300.00 ns, 47.4438 ms/op
+WorkloadActual   3: 11 op, 550858900.00 ns, 50.0781 ms/op
+WorkloadActual   4: 11 op, 518966200.00 ns, 47.1787 ms/op
+WorkloadActual   5: 11 op, 508942700.00 ns, 46.2675 ms/op
+WorkloadActual   6: 11 op, 520802800.00 ns, 47.3457 ms/op
+WorkloadActual   7: 11 op, 518913600.00 ns, 47.1740 ms/op
+WorkloadActual   8: 11 op, 533335800.00 ns, 48.4851 ms/op
+WorkloadActual   9: 11 op, 536984800.00 ns, 48.8168 ms/op
+WorkloadActual  10: 11 op, 522339900.00 ns, 47.4854 ms/op
+WorkloadActual  11: 11 op, 520439300.00 ns, 47.3127 ms/op
+WorkloadActual  12: 11 op, 518750500.00 ns, 47.1591 ms/op
+WorkloadActual  13: 11 op, 547429700.00 ns, 49.7663 ms/op
+WorkloadActual  14: 11 op, 532918900.00 ns, 48.4472 ms/op
+WorkloadActual  15: 11 op, 536433100.00 ns, 48.7666 ms/op
+WorkloadActual  16: 11 op, 547770000.00 ns, 49.7973 ms/op
+WorkloadActual  17: 11 op, 531894700.00 ns, 48.3541 ms/op
+WorkloadActual  18: 11 op, 532573400.00 ns, 48.4158 ms/op
+WorkloadActual  19: 11 op, 515482200.00 ns, 46.8620 ms/op
+WorkloadActual  20: 11 op, 547640400.00 ns, 49.7855 ms/op
+WorkloadActual  21: 11 op, 546857900.00 ns, 49.7144 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 11 op, 535706300.00 ns, 48.7006 ms/op
+WorkloadResult   2: 11 op, 521881300.00 ns, 47.4438 ms/op
+WorkloadResult   3: 11 op, 550858900.00 ns, 50.0781 ms/op
+WorkloadResult   4: 11 op, 518966200.00 ns, 47.1787 ms/op
+WorkloadResult   5: 11 op, 508942700.00 ns, 46.2675 ms/op
+WorkloadResult   6: 11 op, 520802800.00 ns, 47.3457 ms/op
+WorkloadResult   7: 11 op, 518913600.00 ns, 47.1740 ms/op
+WorkloadResult   8: 11 op, 533335800.00 ns, 48.4851 ms/op
+WorkloadResult   9: 11 op, 536984800.00 ns, 48.8168 ms/op
+WorkloadResult  10: 11 op, 522339900.00 ns, 47.4854 ms/op
+WorkloadResult  11: 11 op, 520439300.00 ns, 47.3127 ms/op
+WorkloadResult  12: 11 op, 518750500.00 ns, 47.1591 ms/op
+WorkloadResult  13: 11 op, 547429700.00 ns, 49.7663 ms/op
+WorkloadResult  14: 11 op, 532918900.00 ns, 48.4472 ms/op
+WorkloadResult  15: 11 op, 536433100.00 ns, 48.7666 ms/op
+WorkloadResult  16: 11 op, 547770000.00 ns, 49.7973 ms/op
+WorkloadResult  17: 11 op, 531894700.00 ns, 48.3541 ms/op
+WorkloadResult  18: 11 op, 532573400.00 ns, 48.4158 ms/op
+WorkloadResult  19: 11 op, 515482200.00 ns, 46.8620 ms/op
+WorkloadResult  20: 11 op, 547640400.00 ns, 49.7855 ms/op
+WorkloadResult  21: 11 op, 546857900.00 ns, 49.7144 ms/op
+// GC:  44 25 8 236717736 11
+// Threading:  0 0 11
+
+// AfterAll
+// Benchmark Process 12612 has exited with code 0.
+
+Mean = 48.255 ms, StdErr = 0.248 ms (0.51%), N = 21, StdDev = 1.135 ms
+Min = 46.268 ms, Q1 = 47.313 ms, Median = 48.416 ms, Q3 = 48.817 ms, Max = 50.078 ms
+IQR = 1.504 ms, LowerFence = 45.056 ms, UpperFence = 51.073 ms
+ConfidenceInterval = [47.302 ms; 49.208 ms] (CI 99.9%), Margin = 0.953 ms (1.98% of Mean)
+Skewness = 0.11, Kurtosis = 1.66, MValue = 2
+
+// ** Remained 1 (33,3 %) benchmark(s) to run. Estimated finish 2025-11-26 1:35 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: MappingBenchmarks.MapperlyMapping: DefaultJob [Count=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AutoMapperVsMapperly-DefaultJob-1.dll --anonymousPipes 1508 1480 --benchmarkName "AutoMapperVsMapperly.MappingBenchmarks.MapperlyMapping(Count: 100000)" --job Default --benchmarkId 2 in D:\projects\AutoMapperVsMapperly\AutoMapperVsMapperly\bin\Release\net10.0\AutoMapperVsMapperly-DefaultJob-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.6
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 179000.00 ns, 179.0000 us/op
+WorkloadJitting  1: 1 op, 23956500.00 ns, 23.9565 ms/op
+
+OverheadJitting  2: 16 op, 591400.00 ns, 36.9625 us/op
+WorkloadJitting  2: 16 op, 618384500.00 ns, 38.6490 ms/op
+
+WorkloadPilot    1: 16 op, 621842000.00 ns, 38.8651 ms/op
+
+OverheadWarmup   1: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadWarmup   2: 16 op, 3200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadWarmup   4: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadWarmup   5: 16 op, 1000.00 ns, 62.5000 ns/op
+
+OverheadActual   1: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadActual   2: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadActual   3: 16 op, 2000.00 ns, 125.0000 ns/op
+OverheadActual   4: 16 op, 1100.00 ns, 68.7500 ns/op
+OverheadActual   5: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadActual   6: 16 op, 1700.00 ns, 106.2500 ns/op
+OverheadActual   7: 16 op, 1300.00 ns, 81.2500 ns/op
+OverheadActual   8: 16 op, 1200.00 ns, 75.0000 ns/op
+OverheadActual   9: 16 op, 900.00 ns, 56.2500 ns/op
+OverheadActual  10: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadActual  11: 16 op, 1200.00 ns, 75.0000 ns/op
+OverheadActual  12: 16 op, 1300.00 ns, 81.2500 ns/op
+OverheadActual  13: 16 op, 1600.00 ns, 100.0000 ns/op
+OverheadActual  14: 16 op, 21400.00 ns, 1.3375 us/op
+OverheadActual  15: 16 op, 1000.00 ns, 62.5000 ns/op
+OverheadActual  16: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadActual  17: 16 op, 900.00 ns, 56.2500 ns/op
+OverheadActual  18: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadActual  19: 16 op, 900.00 ns, 56.2500 ns/op
+OverheadActual  20: 16 op, 900.00 ns, 56.2500 ns/op
+
+WorkloadWarmup   1: 16 op, 620388400.00 ns, 38.7743 ms/op
+WorkloadWarmup   2: 16 op, 597553900.00 ns, 37.3471 ms/op
+WorkloadWarmup   3: 16 op, 605992700.00 ns, 37.8745 ms/op
+WorkloadWarmup   4: 16 op, 581179500.00 ns, 36.3237 ms/op
+WorkloadWarmup   5: 16 op, 613905900.00 ns, 38.3691 ms/op
+WorkloadWarmup   6: 16 op, 597092900.00 ns, 37.3183 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 16 op, 608322700.00 ns, 38.0202 ms/op
+WorkloadActual   2: 16 op, 581535700.00 ns, 36.3460 ms/op
+WorkloadActual   3: 16 op, 597137600.00 ns, 37.3211 ms/op
+WorkloadActual   4: 16 op, 597265900.00 ns, 37.3291 ms/op
+WorkloadActual   5: 16 op, 609427400.00 ns, 38.0892 ms/op
+WorkloadActual   6: 16 op, 612290400.00 ns, 38.2682 ms/op
+WorkloadActual   7: 16 op, 595634600.00 ns, 37.2272 ms/op
+WorkloadActual   8: 16 op, 599366800.00 ns, 37.4604 ms/op
+WorkloadActual   9: 16 op, 581409300.00 ns, 36.3381 ms/op
+WorkloadActual  10: 16 op, 602680700.00 ns, 37.6675 ms/op
+WorkloadActual  11: 16 op, 609813900.00 ns, 38.1134 ms/op
+WorkloadActual  12: 16 op, 580389900.00 ns, 36.2744 ms/op
+WorkloadActual  13: 16 op, 611149000.00 ns, 38.1968 ms/op
+WorkloadActual  14: 16 op, 601215500.00 ns, 37.5760 ms/op
+WorkloadActual  15: 16 op, 622750200.00 ns, 38.9219 ms/op
+WorkloadActual  16: 16 op, 597906900.00 ns, 37.3692 ms/op
+WorkloadActual  17: 16 op, 596366200.00 ns, 37.2729 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 16 op, 608321550.00 ns, 38.0201 ms/op
+WorkloadResult   2: 16 op, 581534550.00 ns, 36.3459 ms/op
+WorkloadResult   3: 16 op, 597136450.00 ns, 37.3210 ms/op
+WorkloadResult   4: 16 op, 597264750.00 ns, 37.3290 ms/op
+WorkloadResult   5: 16 op, 609426250.00 ns, 38.0891 ms/op
+WorkloadResult   6: 16 op, 612289250.00 ns, 38.2681 ms/op
+WorkloadResult   7: 16 op, 595633450.00 ns, 37.2271 ms/op
+WorkloadResult   8: 16 op, 599365650.00 ns, 37.4604 ms/op
+WorkloadResult   9: 16 op, 581408150.00 ns, 36.3380 ms/op
+WorkloadResult  10: 16 op, 602679550.00 ns, 37.6675 ms/op
+WorkloadResult  11: 16 op, 609812750.00 ns, 38.1133 ms/op
+WorkloadResult  12: 16 op, 580388750.00 ns, 36.2743 ms/op
+WorkloadResult  13: 16 op, 611147850.00 ns, 38.1967 ms/op
+WorkloadResult  14: 16 op, 601214350.00 ns, 37.5759 ms/op
+WorkloadResult  15: 16 op, 622749050.00 ns, 38.9218 ms/op
+WorkloadResult  16: 16 op, 597905750.00 ns, 37.3691 ms/op
+WorkloadResult  17: 16 op, 596365050.00 ns, 37.2728 ms/op
+// GC:  65 40 13 344317600 16
+// Threading:  0 0 16
+
+// AfterAll
+// Benchmark Process 7540 has exited with code 0.
+
+Mean = 37.517 ms, StdErr = 0.177 ms (0.47%), N = 17, StdDev = 0.729 ms
+Min = 36.274 ms, Q1 = 37.273 ms, Median = 37.460 ms, Q3 = 38.089 ms, Max = 38.922 ms
+IQR = 0.816 ms, LowerFence = 36.048 ms, UpperFence = 39.314 ms
+ConfidenceInterval = [36.807 ms; 38.227 ms] (CI 99.9%), Margin = 0.710 ms (1.89% of Mean)
+Skewness = -0.18, Kurtosis = 2.27, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2025-11-26 1:35 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\AutoMapperVsMapperly.MappingBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\AutoMapperVsMapperly.MappingBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\AutoMapperVsMapperly.MappingBenchmarks-report.html
+
+// * Detailed results *
+MappingBenchmarks.ManualMapping: DefaultJob [Count=100000]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 38.459 ms, StdErr = 0.201 ms (0.52%), N = 26, StdDev = 1.025 ms
+Min = 37.034 ms, Q1 = 37.597 ms, Median = 38.297 ms, Q3 = 39.285 ms, Max = 40.610 ms
+IQR = 1.687 ms, LowerFence = 35.067 ms, UpperFence = 41.815 ms
+ConfidenceInterval = [37.710 ms; 39.208 ms] (CI 99.9%), Margin = 0.749 ms (1.95% of Mean)
+Skewness = 0.52, Kurtosis = 2.1, MValue = 2.5
+-------------------- Histogram --------------------
+[36.580 ms ; 37.427 ms) | @@@
+[37.427 ms ; 38.336 ms) | @@@@@@@@@@@@
+[38.336 ms ; 39.177 ms) | @@@
+[39.177 ms ; 40.085 ms) | @@@@@@
+[40.085 ms ; 41.064 ms) | @@
+---------------------------------------------------
+
+MappingBenchmarks.AutoMapperMapping: DefaultJob [Count=100000]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 48.255 ms, StdErr = 0.248 ms (0.51%), N = 21, StdDev = 1.135 ms
+Min = 46.268 ms, Q1 = 47.313 ms, Median = 48.416 ms, Q3 = 48.817 ms, Max = 50.078 ms
+IQR = 1.504 ms, LowerFence = 45.056 ms, UpperFence = 51.073 ms
+ConfidenceInterval = [47.302 ms; 49.208 ms] (CI 99.9%), Margin = 0.953 ms (1.98% of Mean)
+Skewness = 0.11, Kurtosis = 1.66, MValue = 2
+-------------------- Histogram --------------------
+[45.728 ms ; 47.713 ms) | @@@@@@@@@
+[47.713 ms ; 49.125 ms) | @@@@@@@
+[49.125 ms ; 50.618 ms) | @@@@@
+---------------------------------------------------
+
+MappingBenchmarks.MapperlyMapping: DefaultJob [Count=100000]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 37.517 ms, StdErr = 0.177 ms (0.47%), N = 17, StdDev = 0.729 ms
+Min = 36.274 ms, Q1 = 37.273 ms, Median = 37.460 ms, Q3 = 38.089 ms, Max = 38.922 ms
+IQR = 0.816 ms, LowerFence = 36.048 ms, UpperFence = 39.314 ms
+ConfidenceInterval = [36.807 ms; 38.227 ms] (CI 99.9%), Margin = 0.710 ms (1.89% of Mean)
+Skewness = -0.18, Kurtosis = 2.27, MValue = 2
+-------------------- Histogram --------------------
+[35.902 ms ; 36.682 ms) | @@@
+[36.682 ms ; 37.822 ms) | @@@@@@@@
+[37.822 ms ; 39.294 ms) | @@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.6, Windows 10 (10.0.19045.6456/22H2/2022Update)
+Intel Core i7-10750H CPU 2.60GHz (Max: 2.59GHz), 1 CPU, 12 logical and 6 physical cores
+.NET SDK 10.0.100
+  [Host]     : .NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3
+  DefaultJob : .NET 10.0.0 (10.0.0, 10.0.25.52411), X64 RyuJIT x86-64-v3
+
+
+| Method            | Count  | Mean     | Error    | StdDev   | Ratio | RatioSD | Gen0      | Gen1      | Gen2     | Allocated | Alloc Ratio |
+|------------------ |------- |---------:|---------:|---------:|------:|--------:|----------:|----------:|---------:|----------:|------------:|
+| ManualMapping     | 100000 | 38.46 ms | 0.749 ms | 1.025 ms |  1.00 |    0.04 | 4062.5000 | 2500.0000 | 812.5000 |  20.52 MB |        1.00 |
+| AutoMapperMapping | 100000 | 48.26 ms | 0.953 ms | 1.135 ms |  1.26 |    0.04 | 4000.0000 | 2272.7273 | 727.2727 |  20.52 MB |        1.00 |
+| MapperlyMapping   | 100000 | 37.52 ms | 0.710 ms | 0.729 ms |  0.98 |    0.03 | 4062.5000 | 2500.0000 | 812.5000 |  20.52 MB |        1.00 |
+
+// * Legends *
+  Count       : Value of the 'Count' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  RatioSD     : Standard deviation of the ratio distribution ([Current]/[Baseline])
+  Gen0        : GC Generation 0 collects per 1000 operations
+  Gen1        : GC Generation 1 collects per 1000 operations
+  Gen2        : GC Generation 2 collects per 1000 operations
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ms        : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:03 (63.32 sec), executed benchmarks: 3
+
+Global total time: 00:01:11 (71.32 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished
